@@ -1,5 +1,4 @@
 # Economic Analysis of Nigeria Using SQL and Data Visualization  
-# Economic Analysis of Nigeria Using SQL and Data Visualization
 
 ## Project Overview
 
