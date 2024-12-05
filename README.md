@@ -1,7 +1,4 @@
 # Economic Analysis of Nigeria Using SQL and Data Visualization  
-# Economic Analysis of Nigeria Using SQL and Data Visualization
-
-## Project Documentation
 
 ### Project Overview
 
@@ -62,13 +59,9 @@ The trends in unemployment rates were visualized using a line chart, highlightin
 ### SQL Queries and Calculations
 
 #### 4.1 Debt-to-GDP Ratio Calculation
-The formula for calculating the Debt-to-GDP ratio is:
+The formula for calculating the Debt-to-GDP ratio is:(Government Debt / Nominal GDP) * 100
 
 ```sql
-(Government Debt / Nominal GDP) * 100
-
-
----
     SELECT
        Year,
        Government_Debt,
@@ -77,5 +70,20 @@ The formula for calculating the Debt-to-GDP ratio is:
     FROM `osose1.nigeria_economy1.economy_analysis`
     ORDER BY Year;
 
+Inflation & Unemployment Trends
+SQL query to analyze the trends in inflation and unemployment rates:
+
+
+```sql
+    SELECT
+       Year,
+       Inflation_rate,
+       Unemployment_rate,
+       LAG(Inflation_rate) OVER (ORDER BY Year) AS Previous_Inflation,
+       (Inflation_rate - LAG(Inflation_rate) OVER (ORDER BY Year)) / LAG(Inflation_rate) OVER (ORDER BY Year) * 100 AS Inflation_Growth_Rate,
+       LAG(Unemployment_rate) OVER (ORDER BY Year) AS Previous_Unemployment,
+       (Unemployment_rate - LAG(Unemployment_rate) OVER (ORDER BY Year)) / LAG(Unemployment_rate) OVER (ORDER BY Year) * 100 AS Unemployment_Growth_Rate
+    FROM `osose1.nigeria_economy1.economy_analysis`
+    ORDER BY Year;
 
 
