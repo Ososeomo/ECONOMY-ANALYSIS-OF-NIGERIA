@@ -1,104 +1,81 @@
 # Economic Analysis of Nigeria Using SQL and Data Visualization  
+# Economic Analysis of Nigeria Using SQL and Data Visualization
 
-## Project Overview
+## Project Documentation
 
-### Objective
-This project aims to analyze Nigeria's economic data from 1990 to 2022, focusing on key indicators such as inflation, unemployment, sector contributions to GDP, and government debt. The analysis leverages SQL for data extraction and manipulation, alongside data visualization tools to derive insights into the country's economic performance.
+### Project Overview
 
-### Key Analysis Areas
-- **Inflation and Unemployment Trends:** Examining the relationship between inflation and unemployment over time.
-- **Sectoral Contributions to GDP:** Investigating contributions from Agriculture, Industry, and Services sectors to Nigeria's GDP.
-- **Debt-to-GDP Ratio:** Analyzing Nigeria’s government debt relative to GDP over time.
+#### Objective
+The goal of this project was to analyze Nigeria's economic data over the past few decades, focusing on key indicators such as inflation, unemployment, sector contributions to GDP, and government debt. The analysis utilized SQL for data extraction and manipulation, alongside data visualization tools to provide insights into the country’s economic performance from 1990 to 2022.
 
----
+#### Key Analysis Areas
+- **Inflation and Unemployment Trends**: Examining the relationship between inflation and unemployment rates over time.
+- **Sectoral Contributions to GDP**: Investigating how the sectors of Agriculture, Industry, and Services have contributed to Nigeria's GDP.
+- **Debt-to-GDP Ratio**: Analyzing Nigeria’s growing government debt relative to GDP over time.
 
-## Data Overview
+### Data Overview
 
-### Data Sources
-- **Primary Dataset:** `Nigeria Economy - Data Prepared by Alaoh Sodiq.xlsx`
-  
-This dataset provides information on economic indicators such as inflation, unemployment, GDP contributions by sector, nominal GDP, real GDP, and government debt from 1990 to 2022.
+The data for this project came from two main sources:
 
-### Columns
-- **Year:** The year the data was collected.
-- **Inflation rate:** Annual inflation rate.
-- **Unemployment rate:** Percentage of the labor force unemployed.
-- **Government debt:** Total government debt.
-- **Sector contributions:** Contributions of Agriculture, Industry, and Services to GDP.
-- **Nominal GDP:** GDP at current market prices.
-- **Real GDP:** GDP adjusted for inflation.
+- **Nigeria Economy - Data Prepared by Alaoh Sodiq.xlsx**
+  These datasets provided information about various economic indicators, including inflation, unemployment, GDP contributions by sector, nominal GDP, real GDP, and government debt from 1990 to 2022.
 
----
+#### Columns:
+- **Year**: The year the data was collected.
+- **Inflation rate**: Annual inflation rate.
+- **Unemployment rate**: The percentage of the labor force that is unemployed.
+- **Government debt**: The total government debt.
+- **Sector contributions**: Contribution of Agriculture, Industry, and Services to the GDP.
+- **Nominal GDP**: GDP at current market prices.
+- **Real GDP**: GDP adjusted for inflation.
 
-## Data Cleaning and Preparation
-Before analysis, the following steps were taken:
-- **Standardized Column Names:** Ensured consistency across datasets.
-- **Handled Missing Data:** Filled or removed missing/redundant data.
+### Data Cleaning and Preparation
+Before beginning the analysis, the following steps were performed:
+- **Standardized column names**: Ensured column names are consistent across both datasets.
+- **Handled missing data**: Filled or removed any missing or redundant data.
 
----
+### Exploratory Data Analysis (EDA)
 
-## Exploratory Data Analysis (EDA)
+#### Inflation & Unemployment Trends
+The trends of inflation and unemployment rates were visualized using a line chart, tracking how these indicators have evolved over time. Insights:
+- Inflation and unemployment rates fluctuate significantly, with notable spikes in the 2000s and 2010s.
+- Inflation appears more volatile, while unemployment shows a gradual increase.
 
-### 1. Inflation & Unemployment Trends
-- **Visualization:** Line charts were used to show trends over time.
-- **Insights:**
-  - Inflation and unemployment rates showed significant fluctuations, especially in the 2000s and 2010s.
-  - Inflation is more volatile, while unemployment trends show a gradual rise over the years.
+#### Sectoral Contribution to GDP
+A stacked bar chart or area chart was used to visualize how the contributions of Agriculture, Industry, and Services to GDP have changed. Key observations:
+- The Services sector shows consistent growth and is the largest contributor to GDP.
+- Agriculture and Industry contributions have fluctuated, with Agriculture's share decreasing over time while Industry's share has remained relatively stable.
 
-### 2. Sectoral Contributions to GDP
-- **Visualization:** Stacked bar/area charts illustrate sector contributions over time.
-- **Key Observations:**
-  - The **Services** sector consistently grew, becoming the largest contributor to GDP.
-  - The **Agriculture** sector's share decreased, while the **Industry** sector remained relatively stable.
+#### Debt-to-GDP Ratio
+The Debt-to-GDP ratio was calculated and visualized using a line chart. Insights:
+- The ratio was above 70% in the early 1990s but decreased significantly in the mid-1990s.
+- From 2006 to 2015, the ratio began to rise, reaching about 23.7% by 2015.
+- The ratio continued to rise between 2016 and 2022, reaching 37.97% by 2022, indicating increasing reliance on debt.
 
-### 3. Debt-to-GDP Ratio
-- **Visualization:** Line charts were used to show changes in the Debt-to-GDP ratio.
-- **Insights:**
-  - The ratio exceeded 70% in the early 1990s, then fell in the mid-1990s.
-  - A rise was observed from 2006, reaching 37.97% by 2022, indicating increased reliance on debt.
+#### Unemployment Rate Trends
+The trends in unemployment rates were visualized using a line chart, highlighting key periods of stability, growth, and fluctuations in the labor market over the years. Insights:
+- The unemployment rate remained stable from 1990 to the early 2000s, with minor fluctuations.
+- A gradual increase began in 2005, indicating a shift in labor market dynamics.
+- Significant spikes were observed between 2015 and 2020, reflecting economic challenges, including global disruptions.
+- A slight recovery trend appeared by 2022, suggesting potential improvements in employment opportunities.
 
-### 4. Unemployment Rate Trends
-- **Visualization:** Line charts tracked unemployment rates from 1990 to 2022.
-- **Insights:**
-  - Stability in unemployment was noted during the 1990s and early 2000s.
-  - A gradual increase started in 2005, with significant spikes from 2015 to 2020.
-  - A recovery trend appeared in 2022.
+### SQL Queries and Calculations
 
----
+#### 4.1 Debt-to-GDP Ratio Calculation
+The formula for calculating the Debt-to-GDP ratio is:
 
-## SQL Queries and Calculations
+```sql
+(Government Debt / Nominal GDP) * 100
 
-### 1. Debt-to-GDP Ratio Calculation
-- **Purpose:** Calculate the Debt-to-GDP ratio for each year.
-- **Key Output:** Year, government debt, nominal GDP, and calculated ratio as a percentage.
-- **Explanation:** Sorting by year allows for chronological trend analysis.
-
-### 2. Inflation & Unemployment Trends
-- **Purpose:** Retrieve inflation and unemployment rates for each year.
-- **Key Output:** Year, inflation rate, and unemployment rate.
-- **Explanation:** Sorting by year is essential for identifying trends.
-
-### 3. Sector Contributions to GDP
-- **Purpose:** Calculate year-over-year growth rates for Agriculture, Industry, and Services contributions to GDP.
-- **Key Output:** 
-  - Year
-  - Sectoral contributions
-  - Previous year’s contributions (using `LAG`)
-  - Growth rates as percentages.
-- **Explanation:** The `LAG` function allows for year-over-year comparisons to identify shifts in sectoral performance.
-
-### 4. Unemployment Rate Analysis
-- **Purpose:** Analyze year-over-year unemployment trends.
-- **Key Output:** 
-  - Year
-  - Current unemployment rate
-  - Previous year’s rate (`LAG`)
-  - Rate change percentage.
-- **Explanation:** Percentage changes highlight periods of labor market stability and shifts over time.
 
 ---
+    SELECT
+       Year,
+       Government_Debt,
+       Nominal_GDP,
+       (Government_Debt / Nominal_GDP) * 100 AS Debt_to_GDP_Ratio
+    FROM `osose1.nigeria_economy1.economy_analysis`
+    ORDER BY Year;
 
-## Conclusion
-This project provides insights into Nigeria’s economic trends over three decades using SQL and data visualization. Key findings include sectoral shifts in GDP contributions, evolving unemployment patterns, and an increasing reliance on debt. These insights can inform policy decisions and economic strategies for future growth.
 
 
