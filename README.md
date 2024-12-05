@@ -61,7 +61,6 @@ The trends in unemployment rates were visualized using a line chart, highlightin
 #### 4.1 Debt-to-GDP Ratio Calculation
 The formula for calculating the Debt-to-GDP ratio is:(Government Debt / Nominal GDP) * 100
 
-```sql
     SELECT
        Year,
        Government_Debt,
@@ -70,11 +69,9 @@ The formula for calculating the Debt-to-GDP ratio is:(Government Debt / Nominal 
     FROM `osose1.nigeria_economy1.economy_analysis`
     ORDER BY Year;
 
-Inflation & Unemployment Trends
+4.2 Inflation & Unemployment Trends
 SQL query to analyze the trends in inflation and unemployment rates:
 
-
-```sql
     SELECT
        Year,
        Inflation_rate,
