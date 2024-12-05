@@ -107,57 +107,68 @@ SQL query for unemployment rate analysis:
     ORDER BY year;
 
     
-Data Visualization
-1. Inflation & Unemployment Trends (Line Chart)
+#### Data Visualization
+#### 1. Inflation & Unemployment Trends (Line Chart)
 Data Source: Extracted inflation and unemployment data.
 Chart Type: Line chart.
 X-Axis: Year.
 Y-Axis: Inflation rate and Unemployment rate.
 Insight: Revealed the volatility of inflation and rising unemployment trends.
-2. Sectoral Contribution to GDP (Stacked Bar or Area Chart)
+
+
+#### 2. Sectoral Contribution to GDP (Stacked Bar or Area Chart)
 Data Source: Sectoral contributions (Agriculture, Industry, Services).
 Chart Type: Stacked bar or area chart.
 X-Axis: Year.
 Y-Axis: Percentage of GDP contribution.
 Insight: The Services sector dominates Nigeria's GDP, with Agriculture showing a downward trend.
-3. Debt-to-GDP Ratio (Line Chart)
+
+#### 3. Debt-to-GDP Ratio (Line Chart)
 Data Source: Debt-to-GDP ratio.
 Chart Type: Line chart.
 X-Axis: Year.
 Y-Axis: Debt-to-GDP Ratio.
 Insight: The chart illustrated how Nigeria's debt relative to GDP increased significantly after 2015, reflecting fiscal pressure.
-4. Unemployment Rate Analysis (Line Chart)
+
+#### 4. Unemployment Rate Analysis (Line Chart)
 Data Source: Average Unemployment Rate (1990-2022).
 Chart Type: Line chart.
 X-Axis: Year.
 Y-Axis: Average Unemployment Rate.
 Insight: Illustrated periods of stability, growth, and significant spikes in unemployment from 2015 to 2020.
-Insights and Key Findings
+
+
+#### Insights and Key Findings
 Inflation and Unemployment Trends
+-Inflation and unemployment rates have shown a volatile and upward trend, especially in the last two decades.
+-Inflation was particularly high in 2016 due to the economic recession.
+-Unemployment has steadily increased since 2015, likely due to slow job creation and economic instability.
 
-Inflation and unemployment rates have shown a volatile and upward trend, especially in the last two decades.
-Inflation was particularly high in 2016 due to the economic recession.
-Unemployment has steadily increased since 2015, likely due to slow job creation and economic instability.
-Sectoral Contributions to GDP
 
-The Services sector remains the largest contributor to GDP, signaling Nigeria's shift toward a more service-oriented economy.
+#### Sectoral Contributions to GDP
+
+-The Services sector remains the largest contributor to GDP, signaling Nigeria's shift toward a more service-oriented economy.
 Agriculture, once a leading contributor, has seen a steady decline in its share of GDP.
-Debt-to-GDP Ratio
+
+
+ #### Debt-to-GDP Ratio
 
 Nigeria's debt-to-GDP ratio has increased significantly since 2015, reaching nearly 38% by 2022.
 This trend suggests an increased reliance on government borrowing, which may have implications for future fiscal policy.
 Unemployment Rate Analysis
 
-Interpretation:
-Stability (1990-2004): Minimal variation, reflecting a relatively balanced labor market.
-Growth in Unemployment (2005-2020): Economic challenges, population growth, and structural job market changes contributed to a steady rise.
-Recovery (2021-2022): A decline in unemployment suggests economic recovery efforts may have taken effect post-2020 disruptions.
-Further Insights
-Fluctuations in Inflation and Unemployment: The trend analysis shows significant fluctuations, particularly in the 2000s and 2010s, aligning with economic events such as oil price drops and global shocks.
-Inflation Volatility: Inflation in Nigeria has been volatile, with noticeable spikes, particularly in 2000 and 2016, due to economic recessions and external shocks.
-Gradual Increase in Unemployment: Unemployment has been on a consistent rise, attributed to factors such as slow economic growth, high population growth, and insufficient job creation.
-Conclusion
+#### Interpretation:
+-Stability (1990-2004): Minimal variation, reflecting a relatively balanced labor market.
+-Growth in Unemployment (2005-2020): Economic challenges, population growth, and structural job market changes contributed to a steady rise.
+-Recovery (2021-2022): A decline in unemployment suggests economic recovery efforts may have taken effect post-2020 disruptions.
+
+#### Further Insights
+-Fluctuations in Inflation and Unemployment: The trend analysis shows significant fluctuations, particularly in the 2000s and 2010s, aligning with economic events such as oil price drops and global shocks.
+-Inflation Volatility: Inflation in Nigeria has been volatile, with noticeable spikes, particularly in 2000 and 2016, due to economic recessions and external shocks.
+-Gradual Increase in Unemployment: Unemployment has been on a consistent rise, attributed to factors such as slow economic growth, high population growth, and insufficient job creation.
+
+#### Conclusion:
 The analysis provides a comprehensive view of Nigeria's economic performance over the years:
 
-GDP Growth: Steady growth in GDP until a dip in 2020 due to the COVID-19 pandemic.
-Sectoral Shifts: A shift from agriculture to services, reflecting global economic trends and domestic industrialization.
+-GDP Growth: Steady growth in GDP until a dip in 2020 due to the COVID-19 pandemic.
+-Sectoral Shifts: A shift from agriculture to services, reflecting global economic trends and domestic industrialization.
