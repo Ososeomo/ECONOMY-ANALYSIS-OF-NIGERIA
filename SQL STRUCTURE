@@ -1,0 +1,69 @@
+##SQL STRUCTURE 
+SELECT * FROM `osose1.nigeria_economy1.economy_analysis` ;
+
+--To check for missing values (NULL) in specific columns (e.g., inflation, unemployment):
+-- Count missing values (NULL) in important columns
+SELECT
+   COUNT(*) AS missing_inflation
+FROM `osose1.nigeria_economy1.economy_analysis`
+WHERE Inflation_rate IS NULL;
+
+
+SELECT
+   COUNT(*) AS missing_unemployment
+FROM `osose1.nigeria_economy1.economy_analysis`
+WHERE Unemployment_rate IS NULL;
+
+
+--Exploratory Data Analysis (EDA)
+-- Get trends of inflation, unemployment, and GDP over time
+SELECT
+   Year,
+   Inflation_rate,
+   Unemployment_rate,
+   Nominal_GDP,
+   Real_GDP
+FROM `osose1.nigeria_economy1.economy_analysis`
+ORDER BY Year;
+
+
+--SQL Code to Analyze Inflation & Unemployment Trends:
+SELECT
+   Year,
+   Inflation_rate,
+   Unemployment_rate,
+   LAG(Inflation_rate) OVER (ORDER BY Year) AS Previous_Inflation,
+   (Inflation_rate - LAG(Inflation_rate) OVER (ORDER BY Year)) / LAG(Inflation_rate) OVER (ORDER BY Year) * 100 AS Inflation_Growth_Rate,
+   LAG(Unemployment_rate) OVER (ORDER BY Year) AS Previous_Unemployment,
+   (Unemployment_rate - LAG(Unemployment_rate) OVER (ORDER BY Year)) / LAG(Unemployment_rate) OVER (ORDER BY Year) * 100 AS Unemployment_Growth_Rate
+FROM `osose1.nigeria_economy1.economy_analysis`
+ORDER BY Year;
+
+
+--To calculate the sectoral contributions to GDP
+-- Get sector contributions to GDP (Agriculture, Industry, Services)
+SELECT
+   Year,
+   Agriculture_to_GDP / Nominal_GDP * 100 AS Agriculture_Contribution,
+   Industry_to_GDP / Nominal_GDP * 100 AS Industry_Contribution,
+   Services_to_GDP / Nominal_GDP * 100 AS Service_Contribution
+FROM `osose1.nigeria_economy1.economy_analysis`
+ORDER BY Year;
+
+
+--Debt-to-GDP Ratio Calculation
+--This query calculates the Debt-to-GDP ratio over time
+SELECT
+   Year,
+   Government_Debt,
+   Nominal_GDP,
+   (Government_Debt / Nominal_GDP) * 100 AS Debt_to_GDP_Ratio
+FROM `osose1.nigeria_economy1.economy_analysis`
+ORDER BY Year;
+
+
+--Average Unemployment Rate by Year
+SELECT year, AVG(unemployment_rate) AS avg_unemployment
+FROM `osose1.nigeria_economy1.economy_analysis`
+GROUP BY year
+ORDER BY year;
