@@ -172,3 +172,9 @@ The analysis provides a comprehensive view of Nigeria's economic performance ove
 
 -GDP Growth: Steady growth in GDP until a dip in 2020 due to the COVID-19 pandemic.
 -Sectoral Shifts: A shift from agriculture to services, reflecting global economic trends and domestic industrialization.
+
+#### Tools and Technologies Used
+SQL for data extraction and manipulation.
+Lookerstudio for data visualization.
+Google Sheets for preliminary data cleaning.
+
